@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 // Configure CORS for Express
 app.use(cors({
-  origin: 'http://localhost:3001', // Replace with your client URL
+  origin: '*', // Replace with your client URL
   credentials: true,              // Allow credentials (cookies, authorization headers, etc.)
   optionsSuccessStatus: 200,      // For legacy browsers support
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'], // Allowed HTTP methods
@@ -17,7 +17,7 @@ app.use(cors({
 // Configure CORS for Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3001', // Replace with your client URL
+    origin: '*', // Replace with your client URL
     methods: ['GET', 'POST'],        // Allowed HTTP methods
     credentials: true                // Allow credentials
   }
