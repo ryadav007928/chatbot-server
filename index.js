@@ -17,7 +17,7 @@ app.use(cors({
 // Configure CORS for Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: '*', // Replace with your client URL
+    origin: 'https://chatbot-client-sqdg.onrender.com', // Replace with your client URL
     methods: ['GET', 'POST'],        // Allowed HTTP methods
     credentials: true                // Allow credentials
   }
